@@ -30,14 +30,9 @@ RUN chown -R www-data:www-data /app && \
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Configure Apache
-RUN echo '<Directory /app/public>' > /etc/apache2/sites-available/000-default.conf && \
-    echo '  Options Indexes FollowSymLinks' >> /etc/apache2/sites-available/000-default.conf && \
-    echo '  AllowOverride All' >> /etc/apache2/sites-available/000-default.conf && \
-    echo '  Require all granted' >> /etc/apache2/sites-available/000-default.conf && \
-    echo '</Directory>' >> /etc/apache2/sites-available/000-default.conf && \
-    echo '' >> /etc/apache2/sites-available/000-default.conf && \
-    echo 'DocumentRoot /app/public' >> /etc/apache2/sites-available/000-default.conf
+# Configure Apache to serve from public directory
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /app/public|' /etc/apache2/sites-available/000-default.conf && \
+    sed -i '/<Directory \/var\/www\/html>/,/<\/Directory>/c\<Directory /app/public>\n    Options Indexes FollowSymLinks\n    AllowOverride All\n    Require all granted\n<\/Directory>' /etc/apache2/sites-available/000-default.conf
 
 EXPOSE 80
 

@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    git curl zip unzip libpq-dev \
+    git curl zip unzip \
     && docker-php-ext-install pdo pdo_mysql \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
@@ -19,15 +19,27 @@ COPY . .
 RUN composer install --optimize-autoloader --no-dev
 
 # Set permissions
-RUN chown -R www-data:www-data /app/storage /app/bootstrap/cache \
-    && chmod -R 775 /app/storage /app/bootstrap/cache
+RUN chown -R www-data:www-data /app/storage /app/bootstrap/cache && \
+    chmod -R 775 /app/storage /app/bootstrap/cache
 
-# Configure Apache
-RUN sed -i 's|/var/www/html|/app/public|g' /etc/apache2/sites-available/000-default.conf \
-    && sed -i '/<Directory \/app\/public>/,/<\/Directory>/c\<Directory /app/public>\n    Options Indexes FollowSymLinks\n    AllowOverride All\n    Require all granted\n<\/Directory>' /etc/apache2/sites-available/000-default.conf
-
-# Cache config
-RUN php artisan config:cache || true
+# Update Apache config
+RUN cat > /etc/apache2/sites-available/000-default.conf <<'EOF'
+<VirtualHost *:80>
+    DocumentRoot /app/public
+    <Directory /app/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase /
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule ^(.*)$ index.php?/$1 [L]
+        </IfModule>
+    </Directory>
+</VirtualHost>
+EOF
 
 EXPOSE 80
 

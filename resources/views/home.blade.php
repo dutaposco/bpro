@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="hidden md:block">
-                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop" alt="Football" class="rounded-lg shadow-2xl">
+                    <img src="https://bpro.nnmaa.com/BrownBrother.jpg?w=600&h=400&fit=crop" alt="Football" class="rounded-lg shadow-2xl">
                 </div>
             </div>
         </div>

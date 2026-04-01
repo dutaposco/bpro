@@ -1,6 +1,7 @@
 FROM php:8.3-apache
 WORKDIR /app
-RUN apt-get update && apt-get install -y git curl zip unzip && docker-php-ext-install pdo pdo_mysql && a2dismod mpm_prefork && a2enmod mpm_event && a2enmod rewrite && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl zip unzip && docker-php-ext-install pdo pdo_mysql && rm -rf /var/lib/apt/lists/*
+RUN a2dismod mpm_prefork mpm_event mpm_worker 2>/dev/null || true && a2enmod mpm_prefork && a2enmod rewrite
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 RUN composer install --no-dev --optimize-autoloader

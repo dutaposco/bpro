@@ -15,7 +15,7 @@ class ProgramController extends Controller
                 'duration' => '3 Bulan',
                 'price' => 'Rp 999.000',
                 'description' => 'Bersama Jack Brown, kuasai teknik operan dan penempatan posisi yang profesional untuk pemula.',
-                'image' => 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&auto=format&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop',
                 'features' => ['3x Per Minggu', 'Jack Brown Mentorship', 'Video Tutorial', 'Progress Tracking'],
             ],
             [
@@ -24,7 +24,7 @@ class ProgramController extends Controller
                 'duration' => '6 Bulan',
                 'price' => 'Rp 1.999.000',
                 'description' => 'Latihan intensif dribbling dan visi bermain dari pengalaman George Brown di kompetisi liga profesional.',
-                'image' => 'https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=800&auto=format&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop',
                 'features' => ['5x Per Minggu', 'Analisis George Brown', 'Pelatihan Taktik', 'Simulasi Pertandingan'],
             ],
             [
@@ -33,7 +33,7 @@ class ProgramController extends Controller
                 'duration' => '4 Bulan',
                 'price' => 'Rp 1.599.000',
                 'description' => 'Siapkan mental dan fisik juara ala Jack Brown untuk menembus skuad klub papan atas.',
-                'image' => 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&auto=format&fit=crop',
                 'features' => ['4x Per Minggu', 'Pelatihan Mental ELIT', 'Latihan Turnamen', 'Formasi Tim'],
             ],
             [

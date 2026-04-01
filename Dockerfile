@@ -19,4 +19,4 @@ RUN npm install && npm run build
 
 RUN chown -R www-data:www-data /app
 EXPOSE 8000
-CMD ["sh", "-c", "php artisan migrate --force && php -S 0.0.0.0:${PORT:-8000} -t public"]
+CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force && php -S 0.0.0.0:${PORT:-8000} -t public"]

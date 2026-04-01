@@ -6,6 +6,7 @@ COPY . .
 RUN cp .env.production .env
 RUN mkdir -p storage/logs bootstrap/cache && chmod -R 777 storage bootstrap/cache
 RUN composer install --no-dev --optimize-autoloader
+RUN php artisan migrate --force --no-interaction
 RUN chown -R www-data:www-data /app
 EXPOSE 8000
 CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-8000} -t public"]

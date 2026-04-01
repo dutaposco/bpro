@@ -14,8 +14,8 @@ class HomeController extends Controller
                 'title' => 'Beginner Football Training',
                 'duration' => '3 Bulan',
                 'price' => 'Rp 999.000',
-                'description' => 'Program pelatihan dasar bersama Jack Brown untuk membangun fondasi teknis yang kuat.',
-                'image' => 'https://img.okeinfo.net/content/2023/12/30/38/2947116/george-brown-jack-brown-bersinar-di-persita-tangerang-mampukah-keduanya-tembus-skuad-timnas-indonesia-asuhan-shin-tae-yong-7Nisv5i73e.jpg',
+                'description' => 'Program pelatihan dasar bersama Jack Brown untuk membangun fondasi teknis yang kuat di lapangan.',
+                'image' => 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop',
             ],
             [
                 'id' => 2,
@@ -23,15 +23,15 @@ class HomeController extends Controller
                 'duration' => '6 Bulan',
                 'price' => 'Rp 1.999.000',
                 'description' => 'Asah teknik dribbling dan visi bermain seperti George Brown di Persita Tangerang.',
-                'image' => 'https://media.suara.com/pictures/653x366/2023/11/24/60228-george-brown-dan-jack-brown-di-persita-tangerang.jpg',
+                'image' => 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop',
             ],
             [
                 'id' => 3,
                 'title' => 'Persiapan Kompetisi',
                 'duration' => '4 Bulan',
                 'price' => 'Rp 1.599.000',
-                'description' => 'Program mental dan fisik untuk siap bertanding di level profesional.',
-                'image' => 'https://static.republika.co.id/uploads/images/inpicture_slide/selebrasi-pemain-pusamania-borneo-fc-jack-brown-tengah-saat_220311094038-726.jpg',
+                'description' => 'Program mental dan fisik ala Jack Brown untuk siap bertanding di level profesional.',
+                'image' => 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&auto=format&fit=crop',
             ],
         ];
 

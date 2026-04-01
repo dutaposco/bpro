@@ -14,7 +14,7 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-10">
                 <a href="{{ route('home') }}" class="text-sm font-bold tracking-widest uppercase {{ request()->routeIs('home') ? 'text-red-600' : 'text-gray-500 hover:text-red-600' }} transition">Home</a>
-                <a href="{{ route('programs') }}" class="text-sm font-bold tracking-widest uppercase {{ request()->routeIs('programs') ? 'text-red-600' : 'text-gray-500 hover:text-red-600' }} transition cursor-not-allowed opacity-50">Programs</a>
+                <a href="{{ route('programs') }}" class="text-sm font-bold tracking-widest uppercase {{ request()->routeIs('programs') ? 'text-red-600' : 'text-gray-500 hover:text-red-600' }} transition">Programs</a>
                 <a href="{{ route('videos.index') }}" class="text-sm font-bold tracking-widest uppercase {{ request()->routeIs('videos.*') ? 'text-red-600' : 'text-gray-500 hover:text-red-600' }} transition">Videos</a>
             </div>
 

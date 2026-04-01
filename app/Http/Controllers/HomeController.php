@@ -14,16 +14,16 @@ class HomeController extends Controller
                 'title' => 'Beginner Football Training',
                 'duration' => '3 Bulan',
                 'price' => 'Rp 999.000',
-                'description' => 'Program pemula lengkap dengan panduan pelatihan profesional.',
-                'image' => 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop',
+                'description' => 'Program pemula lengkap dengan panduan pelatihan profesional dari pelatih berpengalaman.',
+                'image' => 'https://picsum.photos/seed/football1/800/500',
             ],
             [
                 'id' => 2,
                 'title' => 'Teknik & Taktik Lanjutan',
                 'duration' => '6 Bulan',
                 'price' => 'Rp 1.999.000',
-                'description' => 'Program intensif untuk menguasai teknik lanjutan dan strategi permainan.',
-                'image' => 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop',
+                'description' => 'Program intensif untuk menguasai teknik lanjutan dan strategi permainan sepak bola.',
+                'image' => 'https://picsum.photos/seed/football2/800/500',
             ],
             [
                 'id' => 3,
@@ -31,7 +31,7 @@ class HomeController extends Controller
                 'duration' => '4 Bulan',
                 'price' => 'Rp 1.599.000',
                 'description' => 'Program khusus untuk mempersiapkan Anda menghadapi pertandingan kompetitif.',
-                'image' => 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&auto=format&fit=crop',
+                'image' => 'https://picsum.photos/seed/football3/800/500',
             ],
         ];
 

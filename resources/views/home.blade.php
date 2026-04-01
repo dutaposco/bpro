@@ -37,18 +37,16 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($programs as $program)
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
-                        <div class="overflow-hidden h-52 bg-gray-100">
+                        <div class="overflow-hidden h-52 bg-gray-200">
                             <img src="{{ $program['image'] }}"
                                  alt="{{ $program['title'] }}"
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                 loading="lazy">
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-black text-gray-900 mb-1 group-hover:text-red-600 transition-colors">{{ $program['title'] }}</h3>
-                            <p class="text-2xl font-black text-red-600 mb-3">{{ $program['price'] }}</p>
+                            <h3 class="text-xl font-black text-gray-900 mb-2 group-hover:text-red-600 transition-colors">{{ $program['title'] }}</h3>
                             <p class="text-gray-500 text-sm leading-relaxed mb-6">{{ $program['description'] }}</p>
-                            <a href="#" class="block w-full bg-red-600 hover:bg-black text-white py-3 rounded-xl transition-all font-black text-center text-xs tracking-widest uppercase">
-                                Lihat Detail
+                            <a href="{{ route('programs') }}" class="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl transition-colors font-bold text-center text-sm">
+                                Lihat Program
                             </a>
                         </div>
                     </div>

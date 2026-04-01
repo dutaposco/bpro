@@ -43,4 +43,5 @@ EOF
 
 EXPOSE 80
 
-CMD ["apache2-foreground"]
+# Run migrations and start Apache
+CMD php artisan migrate --force || true; apache2-foreground

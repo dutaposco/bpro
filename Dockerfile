@@ -8,4 +8,4 @@ RUN mkdir -p storage/logs bootstrap/cache && chmod -R 777 storage bootstrap/cach
 RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /app
 EXPOSE 8000
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-8000} -t public"]
+CMD ["sh", "-c", "php artisan migrate --force && php -S 0.0.0.0:${PORT:-8000} -t public"]

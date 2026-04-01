@@ -87,15 +87,4 @@
         </div>
     </section>
     @endif
-
-    <!-- CTA Section -->
-    <section class="bg-red-700 text-white py-8 md:py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-3">Want to learn more?</h2>
-            <p class="text-sm md:text-base mb-6 text-red-100">Explore our training programs with professional coaching</p>
-            <a href="{{ route('programs') }}" class="bg-white text-red-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-50 transition text-sm inline-block">
-                Explore Programs
-            </a>
-        </div>
-    </section>
 @endsection

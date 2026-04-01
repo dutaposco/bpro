@@ -37,21 +37,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($programs as $program)
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
-                        <div class="relative overflow-hidden h-56 bg-gray-200">
-                            <img src="{{ $program['image'] }}" alt="{{ $program['title'] }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute top-4 right-4 capitalize">
-                                <span class="bg-black/60 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs font-black tracking-widest">{{ $program['duration'] }}</span>
-                            </div>
+                        <div class="overflow-hidden h-52 bg-gray-100">
+                            <img src="{{ $program['image'] }}"
+                                 alt="{{ $program['title'] }}"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy">
                         </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-red-600 transition-colors">{{ $program['title'] }}</h3>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-8">{{ $program['description'] }}</p>
-                            
-                            <div class="flex items-center justify-between pt-6 border-t border-gray-50">
-                                <a href="#" class="flex-1 bg-gray-900 hover:bg-red-600 text-white py-4 rounded-xl transition-all font-black text-center text-xs tracking-widest uppercase shadow-lg hover:shadow-red-200 active:scale-95">
-                                    View Program Details
-                                </a>
-                            </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-black text-gray-900 mb-1 group-hover:text-red-600 transition-colors">{{ $program['title'] }}</h3>
+                            <p class="text-2xl font-black text-red-600 mb-3">{{ $program['price'] }}</p>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6">{{ $program['description'] }}</p>
+                            <a href="#" class="block w-full bg-red-600 hover:bg-black text-white py-3 rounded-xl transition-all font-black text-center text-xs tracking-widest uppercase">
+                                Lihat Detail
+                            </a>
                         </div>
                     </div>
                 @endforeach

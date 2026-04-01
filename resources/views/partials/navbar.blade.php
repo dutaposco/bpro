@@ -22,15 +22,9 @@
             <div class="hidden md:flex items-center gap-6">
                 @auth
                     <div class="relative" x-data="{ userOpen: false }">
-                        <button @click="userOpen = !userOpen" @click.away="userOpen = false" class="flex items-center gap-3 p-1.5 pr-4 rounded-full hover:bg-gray-100 transition-all border border-gray-100 shadow-sm group">
-                            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white font-bold shadow-md border-2 border-white transition-transform group-hover:scale-105">
-                                {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs font-black text-gray-900 leading-none mb-1">{{ auth()->user()->name }}</p>
-                                <span class="text-[9px] uppercase font-black text-red-600 tracking-widest bg-red-50 px-2 py-0.5 rounded">Free Academy</span>
-                            </div>
-                            <svg class="w-4 h-4 text-gray-400 group-hover:text-red-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <button @click="userOpen = !userOpen" @click.away="userOpen = false"
+                                class="h-10 w-10 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white font-black text-sm shadow-md border-2 border-white hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
+                            {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
                         </button>
 
                         <!-- Dropdown Card -->

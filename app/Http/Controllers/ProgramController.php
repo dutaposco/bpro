@@ -42,7 +42,7 @@ class ProgramController extends Controller
                 'duration' => '3 Bulan',
                 'price' => 'Rp 799.000',
                 'description' => 'Meningkatkan stamina atlet dengan porsi latihan intensitas tinggi khas pemain profesional.',
-                'image' => 'https://images.unsplash.com/photo-1526232759583-d6f44a154bbf?w=800&auto=format&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop',
                 'features' => ['3x Per Minggu', 'Fisik & Kondisi', 'Latihan Kecepatan', 'Pencegahan Cedera'],
             ],
             [

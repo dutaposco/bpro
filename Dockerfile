@@ -15,7 +15,7 @@ RUN mkdir -p storage/logs bootstrap/cache && chmod -R 777 storage bootstrap/cach
 
 # Install dependencies and build assets
 RUN composer install --no-dev --optimize-autoloader
-RUN npm install && npm run build
+RUN rm -rf node_modules package-lock.json && npm install && npm run build
 
 RUN chown -R www-data:www-data /app
 EXPOSE 8000

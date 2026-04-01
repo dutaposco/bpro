@@ -23,7 +23,7 @@
                 <ul class="space-y-2 text-sm text-gray-700">
                     <li>📞 +1 234 567 8900</li>
                     <li>📧 info@bpro.com</li>
-                    <li>📍 USA</li>
+                    <li>📍 Jakarta, Indonesia</li>
                 </ul>
             </div>
 

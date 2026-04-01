@@ -15,7 +15,7 @@ class HomeController extends Controller
                 'duration' => '3 Bulan',
                 'price' => 'Rp 999.000',
                 'description' => 'Program pemula lengkap dengan panduan pelatihan profesional dari pelatih berpengalaman.',
-                'image' => 'https://picsum.photos/seed/football1/800/500',
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Football_pitch.jpg/800px-Football_pitch.jpg',
             ],
             [
                 'id' => 2,
@@ -23,7 +23,7 @@ class HomeController extends Controller
                 'duration' => '6 Bulan',
                 'price' => 'Rp 1.999.000',
                 'description' => 'Program intensif untuk menguasai teknik lanjutan dan strategi permainan sepak bola.',
-                'image' => 'https://picsum.photos/seed/football2/800/500',
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Youth-soccer-indiana.jpg/800px-Youth-soccer-indiana.jpg',
             ],
             [
                 'id' => 3,
@@ -31,7 +31,7 @@ class HomeController extends Controller
                 'duration' => '4 Bulan',
                 'price' => 'Rp 1.599.000',
                 'description' => 'Program khusus untuk mempersiapkan Anda menghadapi pertandingan kompetitif.',
-                'image' => 'https://picsum.photos/seed/football3/800/500',
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/USA_Soccer_Women%27s_National_Team_warm-up.jpg/800px-USA_Soccer_Women%27s_National_Team_warm-up.jpg',
             ],
         ];
 
